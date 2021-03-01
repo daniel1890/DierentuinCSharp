@@ -1,13 +1,14 @@
 @startuml
 
-Class Dier {
+Abstract Class Dier {
 	+ string Naam
 	+ int AantalLedematen
+	+ Guid Guid
 	+ string GetNaam()
 	+ string SetNaam()
 	+ int GetAantalLedematen()
 	+ int SetAantalLedematen()
-	+ void PrintEigenschappen()
+	+ void toString()
 }
 
 Interface IPlantVoor {

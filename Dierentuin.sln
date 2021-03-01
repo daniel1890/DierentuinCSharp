@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinV0.3", "Dierentui
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2BEE200-75C8-4199-BD2E-2B3C268B510A}"
 	ProjectSection(SolutionItems) = preProject
-		ClassDiagram.puml = ClassDiagram.puml
+		ClassDiagramV0.3.puml = ClassDiagramV0.3.puml
 	EndProjectSection
 EndProject
 Global
