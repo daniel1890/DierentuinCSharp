@@ -4,4 +4,3 @@ en hieruit wil je de dieren en habitats bouwen.
 
 Toekomstige uitbreiding:
 - Gebruik een simpele factory om dieren mee te bouwen.
-- 
