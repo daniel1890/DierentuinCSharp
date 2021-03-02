@@ -1,65 +1,51 @@
-﻿using System;
+﻿using Dierentuin.Entities.HabitatBase;
+using System;
 
 namespace Dierentuin
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Dierentuin Dierentuin = new Dierentuin();
 
             // Voeg een vogel object toe aan de dierentuin.
-            Vogel vogel = new Vogel
-            {
-                Naam = "Henk",
-                AantalLedematen = 2
-            };
-            Dierentuin.Vogelhok.VoegVogelToe(vogel);
+            Vogel vogel = new Vogel { Naam = "Henk", AantalLedematen = 2 };
+            Dierentuin.Vogelhok.VoegDierToe(vogel);
 
             // Voeg een tijger object toe aan de dierentuin
-            var tijger = new Tijger
-            {
-                Naam = "Gert",
-                AantalLedematen = 4
-            };
-            Dierentuin.Jungle.VoegTijgerToe(tijger);
+            var tijger = new Tijger { Naam = "Gert", AantalLedematen = 4 };
+            Dierentuin.Jungle.VoegDierToe(tijger);
 
             // Voeg een vis object toe aan de dierentuin
-            var vis = new Vis
-            {
-                Naam = "Klaas",
-                AantalLedematen = 2
-            };
-            Dierentuin.Aquarium.VoegVisToe(vis);
+            var vis = new Vis { Naam = "Klaas", AantalLedematen = 2 };
+            Dierentuin.Aquarium.VoegDierToe(vis);
 
             // Voeg een aap object toe aan de dierentuin
-            var aap1 = new Aap
-            {
-                Naam = "Piet",
-                AantalLedematen = 4
-            };
-            Dierentuin.Jungle.VoegAapToe(aap1);
+            var aap1 = new Aap { Naam = "Piet", AantalLedematen = 4 };
+            var aap2 = new Aap { Naam = "Dirk", AantalLedematen = 4 };
+            Dierentuin.Apenkooi.VoegDierToe(aap1);
+            Dierentuin.Apenkooi.VoegDierToe(aap2);
 
-            var aap2 = new Aap
-            {
-                Naam = "Dirk",
-                AantalLedematen = 4
-            };
-            Dierentuin.Jungle.VoegAapToe(aap2);
-
-            Dierentuin.Jungle.PrintTijgersEigenschappen();
+            // Print de eigenschappen van de dieren binnen elke habitat en laat elk eten en voortplanten.
+            Dierentuin.Jungle.PrintDierenEigenschappen();
+            tijger.Eet();
             tijger.PlantVoor();
 
-            Dierentuin.Aquarium.PrintVissenEigenschappen();
+            Dierentuin.Aquarium.PrintDierenEigenschappen();
             vis.PlantVoor();
+            vis.Eet();
 
-            Dierentuin.Vogelhok.PrintvogelsEigenschappen();
+            Dierentuin.Vogelhok.PrintDierenEigenschappen();
             vogel.PlantVoor();
+            vogel.Eet();
 
-            Dierentuin.Jungle.PrintApenEigenschappen();
+            Dierentuin.Apenkooi.PrintDierenEigenschappen();
             aap1.PlantVoor();
+            aap1.Eet();
             aap2.PlantVoor();
+            aap2.Eet();
         }
     }
 }

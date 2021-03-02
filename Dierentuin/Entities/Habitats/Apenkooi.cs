@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dierentuin
+namespace Dierentuin.Entities.Habitats
 {
-    internal sealed class Vogelhok : Habitat
+    internal sealed class Apenkooi : Habitat
     {
     }
 }
