@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Dierentuin.Enums;
+using Dierentuin.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Dierentuin.Entities.HabitatBase
 {
-    public abstract class Habitat
+    public abstract class Habitat : IDierenFactory
     {
         public List<Dier> DierenLijst = new List<Dier>();
+
+        public abstract Dier MaakDier(DierType type, string naam, int aantalLedematen);
 
         public void VoegDierToe(Dier dier)
         {

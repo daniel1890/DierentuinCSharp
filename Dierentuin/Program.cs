@@ -31,9 +31,11 @@ namespace Dierentuin
             var aap1 = new Aap { Naam = "Piet", AantalLedematen = 4 };
             var aap2 = new Aap { Naam = "Dirk", AantalLedematen = 4 };
             var aap3 = dierenFactory.MaakDier(DierType.Aap, "Bokito", 4);
+            var aap4 = Dierentuin.Apenkooi.MaakDier(DierType.Aap, "Ali", 3);
             Dierentuin.Apenkooi.VoegDierToe(aap1);
             Dierentuin.Apenkooi.VoegDierToe(aap2);
             Dierentuin.Apenkooi.VoegDierToe(aap3);
+            Dierentuin.Apenkooi.VoegDierToe(aap4);
 
             // Print de eigenschappen van de dieren binnen elke habitat en laat elk eten en voortplanten.
             Dierentuin.Jungle.PrintDierenEigenschappen();
