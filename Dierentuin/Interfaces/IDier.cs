@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Dierentuin.Interfaces
 {
-    interface IDier
+    public interface IDier
     {
         public void PlantVoor();
+
         public void Eet();
     }
 }

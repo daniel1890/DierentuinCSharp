@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Dierentuin
 {
-    class Vogel : DierBase, IDier
+    internal class Vogel : Dier, IDier
     {
-
         public void Eet()
         {
             Console.WriteLine("De vogel genaamd " + this.Naam + " eet.");

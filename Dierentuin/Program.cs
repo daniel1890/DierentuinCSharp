@@ -1,4 +1,6 @@
-﻿using Dierentuin.Entities.HabitatBase;
+﻿using Dierentuin.Entities.DierenFactory;
+using Dierentuin.Entities.HabitatBase;
+using Dierentuin.Enums;
 using System;
 
 namespace Dierentuin
@@ -9,6 +11,9 @@ namespace Dierentuin
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Dierentuin Dierentuin = new Dierentuin();
+
+            // Maak een dierenfactory om dieren mee te creeëren.
+            DierenFactory dierenFactory = new DierenFactory();
 
             // Voeg een vogel object toe aan de dierentuin.
             Vogel vogel = new Vogel { Naam = "Henk", AantalLedematen = 2 };
@@ -25,8 +30,10 @@ namespace Dierentuin
             // Voeg een aap object toe aan de dierentuin
             var aap1 = new Aap { Naam = "Piet", AantalLedematen = 4 };
             var aap2 = new Aap { Naam = "Dirk", AantalLedematen = 4 };
+            var aap3 = dierenFactory.MaakDier(DierType.Aap, "Bokito", 4);
             Dierentuin.Apenkooi.VoegDierToe(aap1);
             Dierentuin.Apenkooi.VoegDierToe(aap2);
+            Dierentuin.Apenkooi.VoegDierToe(aap3);
 
             // Print de eigenschappen van de dieren binnen elke habitat en laat elk eten en voortplanten.
             Dierentuin.Jungle.PrintDierenEigenschappen();

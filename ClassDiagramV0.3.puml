@@ -8,7 +8,7 @@ Abstract Class Dier {
 	+ string SetNaam()
 	+ int GetAantalLedematen()
 	+ int SetAantalLedematen()
-	+ void toString()
+	+ string toString()
 }
 
 Interface IPlantVoor {
@@ -28,16 +28,17 @@ Class Vogel {
 Class Vis {
 }
 
+Abstract Class Habitat {
+	+ List<DierBase> DierenLijst
+}
+
 Class Jungle {
-	+ List<Tijger> Tijgers
 }
 
 Class Vogelkooi {
-	+ List<Vogel> Vogels
 }
 
 Class Aquarium {
-	+ List<Vis> Vissen
 }
 
 Class Dierentuin {
@@ -57,6 +58,10 @@ Vis ..> IPlantVoor
 Tijger ..> IEet
 Vogel ..> IEet
 Vis ..> IEet
+
+Jungle --|> Habitat
+Vogelkooi --|> Habitat
+Aquarium --|> Habitat
 
 Jungle o-- Tijger
 Vogelkooi o-- Vogel

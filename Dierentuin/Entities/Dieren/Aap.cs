@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dierentuin
 {
-    class Aap : DierBase, IDier
+    internal class Aap : Dier, IDier
     {
         public void Eet()
         {

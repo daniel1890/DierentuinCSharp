@@ -6,9 +6,9 @@ namespace Dierentuin.Entities.HabitatBase
 {
     public abstract class Habitat
     {
-        public List<DierBase> DierenLijst = new List<DierBase>();
+        public List<Dier> DierenLijst = new List<Dier>();
 
-        public void VoegDierToe(DierBase dier)
+        public void VoegDierToe(Dier dier)
         {
             DierenLijst.Add(dier);
         }
@@ -17,8 +17,11 @@ namespace Dierentuin.Entities.HabitatBase
         {
             Console.WriteLine("------------------------");
             Console.WriteLine("Dieren in de Jungle: ");
-            foreach (DierBase d in DierenLijst)
+            foreach (Dier d in DierenLijst)
+            {
+                Console.WriteLine("Diernummer: " + (DierenLijst.IndexOf(d) + 1));
                 Console.WriteLine(d.toString());
+            }
         }
     }
 }

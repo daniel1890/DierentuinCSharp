@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dierentuin.Enums
 {
-    internal enum Diersoort
+    public enum DierType
     {
         Tijger,
         Vogel,
