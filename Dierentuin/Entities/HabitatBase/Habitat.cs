@@ -20,12 +20,17 @@ namespace Dierentuin.Entities.HabitatBase
         public void PrintDierenEigenschappen()
         {
             Console.WriteLine("------------------------");
-            Console.WriteLine("Dieren in de Jungle: ");
+            Console.WriteLine("Dieren in de/het " + _getThisClassName() + ".");
             foreach (Dier d in DierenLijst)
             {
                 Console.WriteLine("Diernummer: " + (DierenLijst.IndexOf(d) + 1));
                 Console.WriteLine(d.toString());
             }
+        }
+
+        private string _getThisClassName()
+        {
+            return this.GetType().Name;
         }
     }
 }

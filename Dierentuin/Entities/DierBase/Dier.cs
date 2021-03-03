@@ -18,9 +18,12 @@ namespace Dierentuin
 
         public string toString()
         {
-            string _diertype = GetType().ToString();
-            string _dierentuin = "Dierentuin.";
-            return "Diersoort: " + _diertype.Remove(0, _dierentuin.Length) + ".\nUniek GUID van het dier: " + guid + ".\nNaam van het dier: " + Naam + ".\nHet dier heeft " + AantalLedematen + " aantal ledematen.\n";
+            return "Diersoort: " + _getThisClassName() + ".\nUniek GUID van het dier: " + guid + ".\nNaam van het dier: " + Naam + ".\nHet dier heeft " + AantalLedematen + " aantal ledematen.\n";
+        }
+
+        private string _getThisClassName()
+        {
+            return this.GetType().Name;
         }
     }
 }

@@ -9,7 +9,8 @@ namespace Dierentuin
     {
         public override Dier MaakDier(DierType type, string naam, int aantalLedematen)
         {
-            throw new NotImplementedException();
+            Tijger tijger = new Tijger() { Naam = naam, AantalLedematen = aantalLedematen };
+            return tijger;
         }
     }
 }

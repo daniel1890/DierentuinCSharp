@@ -11,12 +11,9 @@ Abstract Class Dier {
 	+ string toString()
 }
 
-Interface IPlantVoor {
-	+ void PlantVoor()
-}
-
-Interface IEet {
-	+ void Eet()
+Interface IDier {
+	+ void PlantVoor();
+	+ void Eet();
 }
 
 Class Tijger {
@@ -30,6 +27,10 @@ Class Vis {
 
 Abstract Class Habitat {
 	+ List<DierBase> DierenLijst
+}
+
+Interface IDierenFactory {
+	+ Dier MaakDier();
 }
 
 Class Jungle {
@@ -51,17 +52,15 @@ Tijger --|> Dier
 Vogel --|> Dier
 Vis --|> Dier
 
-Tijger..> IPlantVoor
-Vogel ..> IPlantVoor
-Vis ..> IPlantVoor
-
-Tijger ..> IEet
-Vogel ..> IEet
-Vis ..> IEet
+Tijger..> IDier
+Vogel ..> IDier
+Vis ..> IDier
 
 Jungle --|> Habitat
 Vogelkooi --|> Habitat
 Aquarium --|> Habitat
+
+Habitat ..> IDierenFactory
 
 Jungle o-- Tijger
 Vogelkooi o-- Vogel

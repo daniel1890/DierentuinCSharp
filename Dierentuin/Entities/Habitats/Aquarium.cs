@@ -10,7 +10,8 @@ namespace Dierentuin
     {
         public override Dier MaakDier(DierType type, string naam, int aantalLedematen)
         {
-            throw new NotImplementedException();
+            Vis vis = new Vis() { Naam = naam, AantalLedematen = aantalLedematen };
+            return vis;
         }
     }
 }
